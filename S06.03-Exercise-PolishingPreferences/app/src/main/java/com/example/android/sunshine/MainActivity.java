@@ -276,7 +276,7 @@ public class MainActivity extends AppCompatActivity implements
      * open the Common Intents page
      */
     private void openLocationInMap() {
-        // TODO (9) Use preferred location rather than a default location to display in the map
+        // COMPLETED (9) Use preferred location rather than a default location to display in the map
         String addressString = SunshinePreferences.getPreferredWeatherLocation(this);
 
         Uri geoLocation = Uri.parse("geo:0,0?q=" + addressString);
