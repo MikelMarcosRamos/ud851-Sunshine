@@ -362,7 +362,7 @@ public class DetailActivity extends AppCompatActivity implements
         mDetailBinding.extraDetails.wind.setContentDescription(windA11y);
 
 //      COMPLETED (22) Set the content description of the wind label to the wind a11y String
-        mDetailBinding.extraDetails.windLabel.setText(this.getString(R.string.a11y_wind));
+        mDetailBinding.extraDetails.windLabel.setContentDescription(windA11y);
 
         /************
          * Pressure *
@@ -388,7 +388,7 @@ public class DetailActivity extends AppCompatActivity implements
         mDetailBinding.extraDetails.pressure.setContentDescription(pressureA11y);
 
 //      COMPLETED (24) Set the content description of the pressure label to the pressure a11y String
-        mDetailBinding.extraDetails.pressureLabel.setText(this.getString(R.string.a11y_pressure));
+        mDetailBinding.extraDetails.pressureLabel.setContentDescription(pressureA11y);
 
         /* Store the forecast summary String in our forecast summary field to share later */
         mForecastSummary = String.format("%s - %s - %s/%s",
