@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- COMPLETED (28) Create a layout called extra_weather_details.xml -->
+<!-- COMPLETED (29) Surround the entire layout with <layout/> tags for data binding -->
+<!-- COMPLETED (30) Using ConstraintLayout, create the extra weather details layout -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/extra_weather_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingEnd="32dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingStart="32dp"
+        android:paddingTop="16dp">
+
+        <!-- Humidity  -->
+        <TextView
+            android:id="@+id/humidity_label"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/humidity_label"
+            app:layout_constraintVertical_bias="0.33"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="32dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="32dp" />
+
+        <TextView
+            android:id="@+id/humidity"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="38%"
+            app:layout_constraintLeft_toRightOf="@+id/humidity_label"
+            app:layout_constraintTop_toTopOf="@+id/humidity_label"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
+
+        <!-- Pressure  -->
+        <TextView
+            android:id="@+id/pressure_label"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/humidity_label"
+            app:layout_constraintVertical_bias="0.33"
+            app:layout_constraintLeft_toLeftOf="@+id/humidity_label"
+            app:layout_constraintTop_toBottomOf="@+id/humidity_label"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/pressure"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="995 hPa"
+            app:layout_constraintTop_toTopOf="@+id/pressure_label"
+            app:layout_constraintLeft_toLeftOf="@+id/humidity" />
+
+        <!-- Wind  -->
+        <TextView
+            android:id="@+id/wind_label"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/humidity_label"
+            app:layout_constraintVertical_bias="0.33"
+            app:layout_constraintLeft_toLeftOf="@+id/pressure_label"
+            app:layout_constraintTop_toBottomOf="@+id/pressure_label"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/wind"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="4km/h NW"
+            app:layout_constraintTop_toTopOf="@+id/wind_label"
+            app:layout_constraintLeft_toLeftOf="@+id/pressure" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
